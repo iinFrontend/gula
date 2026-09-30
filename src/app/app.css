@@ -1,5 +1,177 @@
 @import 'bootstrap';
 
+/* Center wrapper for full screen centering */
+.page-container {
+  display: grid;
+  place-items: center;
+  min-height: calc(100vh - 60px);
+  background-color: #fce4ec; /* Matches navbar light background */
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.form-card {
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(136, 14, 79, 0.08); /* Pink-tinted shadow */
+  width: 100%;
+  max-width: 340px;
+  border: 1px solid #f8bbd0; /* Matches navbar border */
+}
+
+.form-card h2 {
+  margin: 0 0 24px 0;
+  text-align: center;
+  color: #880e4f; /* Matches navbar brand */
+  font-family: sans-serif;
+}
+
+/* Form layout */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;   
+  gap: 20px;
+}
+
+/* Floating Label Wrapper */
+.i-g {
+  position: relative;
+  margin-top: 6px;
+}
+
+span {
+  font-weight: 1000;
+  font-size: 0.9em;
+  color: #ad1457;
+}
+
+.i-g input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #f8bbd0; /* Matches navbar border */
+  border-radius: 4px;
+  outline: none;
+  font-size: 16px;
+  box-sizing: border-box;
+  color: #880e4f;
+}
+
+.i-g label {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ffffff;
+  padding: 0 4px;
+  color: #ad1457; /* Matches navbar link color */
+  transition: 0.2s ease all;
+  pointer-events: none;
+}
+
+/* Floating label trigger */
+.i-g input:focus ~ label,
+.i-g input:not(:placeholder-shown) ~ label {
+  top: 0;
+  font-size: 12px;
+  color: #880e4f; /* Deep pink active focus color */
+  font-weight: 600;
+}
+
+.i-g input:focus {
+  border-color: #ad1457; /* Focus outline matches nav theme */
+}
+
+input.ng-invalid.ng-touched {
+  border-color: #dc3545;
+}
+
+.i-g input:disabled {
+  background-color: #fcf8f9;
+  color: #c292a1;
+  cursor: not-allowed;
+  border-color: #f8bbd0;
+}
+
+.i-g input:disabled ~ label {
+  color: #c292a1;
+  background-color: transparent;
+}
+
+/* Submit Button styled like navbar interactive items */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #ad1457; /* Primary button tone from navbar */
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease, transform 0.15s ease;
+  will-change: transform;
+}
+
+button[type="submit"]:hover {
+  background-color: #880e4f; /* Hover matches navbar brand/hover text */
+}
+
+button[type="submit"]::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    transparent 100%
+  );
+  transform: skewX(-25deg);
+  pointer-events: none;
+}
+
+button[type="submit"]:hover::after {
+  animation: smoothSweep 1.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes smoothSweep {
+  0% {
+    transform: skewX(-25deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: skewX(-25deg) translate3d(350%, 0, 0);
+  }
+}
+
+.error-container {
+  min-height: 20px;
+  margin-top: 4px;
+}
+
+.warn {
+  color: #dc3545;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+/* Navbar Customization */
 .navbar-custom {
   background-color: #fce4ec;
   border-bottom: 2px solid #f8bbd0;

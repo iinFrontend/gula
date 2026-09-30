@@ -1,0 +1,54 @@
+@import 'bootstrap';
+
+.navbar-custom {
+  background-color: #fce4ec;
+  border-bottom: 2px solid #f8bbd0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-custom .navbar-brand {
+  color: #880e4f;
+  font-weight: 700;
+}
+
+.navbar-custom .nav-link {
+  color: #ad1457;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active {
+  color: #880e4f;
+  background-color: #f8bbd0;
+}
+
+.navbar-custom .dropdown-menu {
+  background-color: #ffffff;
+  border: 1px solid #f8bbd0;
+  box-shadow: 0 4px 12px rgba(136, 14, 79, 0.1);
+  border-radius: 8px;
+  padding: 8px 0;
+}
+
+.navbar-custom .dropdown-item {
+  color: #ad1457;
+  font-weight: 500;
+  padding: 8px 16px;
+}
+
+.navbar-custom .dropdown-item:hover {
+  background-color: #fce4ec;
+  color: #880e4f;
+}
+
+/* Mobile Toggler Customization */
+.navbar-custom .navbar-toggler {
+  border-color: #f8bbd0;
+}
+
+.navbar-custom .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ad1457' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}

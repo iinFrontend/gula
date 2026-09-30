@@ -1,0 +1,51 @@
+<div class="page-container">
+  <div class="form-card">
+    <h2>Pyramid</h2>
+
+    <form [formGroup]="gulaForm" (ngSubmit)="startCalc()">
+      <div class="input-form">
+
+        @if(gulaForm.get('height')?.hasError('required') &&
+        gulaForm.get('height')?.touched){
+          <span>Height value is crucial for the calculation!</span>        }
+
+        @if(gulaForm.get('height')?.hasError('min') &&
+        gulaForm.get('height')?.touched){
+          <span>Minimum value for height is 1</span>        }
+
+
+        <div class="i-g">
+          <input id="height" type="text" formControlName="height" placeholder=" " />
+          <label for="height">Height</label>
+        </div>
+
+        @if(gulaForm.get('side')?.hasError('required') &&
+        gulaForm.get('side')?.touched){
+          <span>Side value is crucial for the calculation!</span>        }
+
+        @if(gulaForm.get('side')?.hasError('min') &&
+        gulaForm.get('side')?.touched){
+          <span>Minimum value for side is 1</span>        }
+
+
+        <div class="i-g">
+          <input id="side" type="text" formControlName="side" placeholder=" " />
+          <label for="side">Side</label>
+        </div>
+
+        <button type="submit">Calculate</button>
+
+        @if (showValue) {
+          <div class="i-g">
+            <input id="volume" type="text" formControlName="volume" readonly placeholder=" " />
+            <label for="volume">Volume</label>
+          </div>
+        }
+
+      </div>
+    </form>
+  </div>
+</div>
+
+
+

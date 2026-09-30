@@ -1,0 +1,27 @@
+.page-container {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-color: #f4f6f8;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  font-weight: 700;
+}
+
+/* Form Card */
+.form-card {
+  background: #f8bbd0;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 340px;
+}
+
+.form-card h2 {
+  margin: 0 0 24px 0;
+  text-align: center;
+  color: #333;
+  font-family: sans-serif;
+}

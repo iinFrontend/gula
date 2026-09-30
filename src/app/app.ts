@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { GulaComponent } from './gula/gula.component';
 
 @Component({
   imports: [RouterOutlet],
@@ -9,4 +10,6 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('doga_pelda');
+  isMenuCollapsed = true;
+  isDropdownOpen = false;
 }
